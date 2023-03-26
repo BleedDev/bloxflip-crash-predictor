@@ -35,7 +35,8 @@ async def crash(interaction):
     std_dev_c = np.std(std_dev)
     prediction = (2 / (average_c - std_dev_c) / 2)
     prediction = prediction + 1
-    risky = prediction + 1
+    risky = (1 / (average_c - std_dev_c) / 4)
+    risky = risky + prediction
     prediction = "{:.2f}".format(prediction)
     risky = "{:.2f}".format(risky)
     em = discord.Embed(color=15844367)
