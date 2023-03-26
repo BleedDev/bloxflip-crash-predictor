@@ -35,15 +35,16 @@ async def crash(interaction):
     std_dev_c = np.std(std_dev)
     prediction = (2 / (average_c - std_dev_c) / 2)
     prediction = prediction + 1
-    risky = (1 / (average_c - std_dev_c) / 4)
+    risky = (4 / (average_c - std_dev_c) / 7)
     risky = risky + prediction
+    risky = risky * 1.25 + prediction
     prediction = "{:.2f}".format(prediction)
     risky = "{:.2f}".format(risky)
     em = discord.Embed(color=15844367)
     em.add_field(name="` ⭐ ` Prediction", value=f"> {prediction}x {risk}", inline=False)
     em.add_field(name="` ⭐ ` Last Games", value=f"> {one}x, {two}x, {three}x", inline=False)
     em.add_field(name="` ⭐ ` Risky Bet", value=f"> {risky}x", inline=False)
-    em.add_field(name="` ⭐ ` Credits", value="bleed#5555", inline=False)
+    em.add_field(name="` ⭐ ` Credits", value="> bleed#5555", inline=False)
     await interaction.response.send_message(embed=em)
 
 bot.run("yourtoken")
