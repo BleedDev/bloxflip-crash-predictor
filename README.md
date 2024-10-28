@@ -10,8 +10,8 @@
  - First Nonskidded Crash Predictor
 
 # ⭐ Discord
- - bleed#5555
- - discord.gg/juicy
+ - _bleed
+ - discord.gg/cloudhost
 
 # 📃 Changelogs
  - Risky Bet Isn't +1 The Prediction Now
